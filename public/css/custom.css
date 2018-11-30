@@ -1,0 +1,20 @@
+.expand {
+    overflow: hidden;
+    max-height: 250px;
+    width: 100%;
+    transition: max-height .15s ease-in-out;
+}
+
+.expand:hover {
+    max-height: 1000px;
+}
+
+.custom-news {
+    background-color: rgb(102, 22, 177);
+    background-image: linear-gradient(to bottom right, rgb(102, 22, 177), rgb(42, 6, 77));
+    background-blend-mode: luminosity;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: white;
+}
