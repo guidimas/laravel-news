@@ -11,9 +11,6 @@
                 </div>
             @endif
             @forelse ($news as $n)
-                @foreach ($news as $n)
-                @foreach ($news as $n)
-                @foreach ($news as $n)
                 <div class="card mb-3 custom-news" style="{{ ($n->image) ? 'background-image: url(' . asset('storage/' . $n->image) . ');' : '' }}">
                     <div class="card-body">
                         <h5 class="d-flex justify-content-between font-weight-bold">
@@ -26,9 +23,6 @@
                         <small>Atualizado em {{ date_format($n->updated_at, 'd/m/y') }} às {{ date_format($n->updated_at, 'H:i:s') }} - Por: {{ ($n->user) ? $n->user->name : 'Anônimo' }} - {{ ($n->comments->count() == 0) ? 'Nenhum' : $n->comments->count() }} comentário{{ ($n->comments->count() > 1) ? 's' : '' }}</small>
                     </div>
                 </div>
-                @endforeach
-                @endforeach
-                @endforeach
             @empty
                 <p>Nenhuma notícia criada ainda.</p>
             @endforelse
