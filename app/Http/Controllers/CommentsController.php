@@ -42,7 +42,7 @@ class CommentsController extends Controller
         $comment = $news->comments()->save($comment);
 
         // Se houver arquivo e nao for nulo
-        if ($request->hasFile('attachment') && $request->file('attachment')->isValid() && $validated['attachment'] != null) {
+        /* if ($request->hasFile('attachment') && $request->file('attachment')->isValid() && $validated['attachment'] != null) {
 
             // Novo nome do arquivo
             $filename =  str_replace('/', '', md5($comment->id)); // . '.' . $request->file('attachment')->extension();
@@ -56,7 +56,7 @@ class CommentsController extends Controller
             // Salva no banco o nome do arquivo
             $comment->save();
 
-        }
+        } */
 
         // Redireciona com a mensagem
         return redirect(route('news.details', $news->id))->with('status', __('Comentário adicionado.'));

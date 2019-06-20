@@ -7,7 +7,7 @@
             <a class="btn btn-link mb-2" href="{{ route('news') }}">&larr; Voltar</a>
             @if($news->image)
             <div class="mb-3 expand rounded shadow-sm">
-                <img src="{{ asset('storage/' . $news->image) }}" alt="{{ $news->title }}" class="img-fluid">
+                <img src="{{ asset($news->image) }}" alt="{{ $news->title }}" class="img-fluid">
             </div>
             @endif
             <h3 class="text-center mb-2">{{ $news->title }}</h3>

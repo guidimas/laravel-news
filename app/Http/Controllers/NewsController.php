@@ -45,7 +45,7 @@ class NewsController extends Controller
         }
 
         // Se houver arquivo e nao for nulo
-        if ($request->hasFile('image') && $request->file('image')->isValid() && $validated['image'] != null) {
+        /* if ($request->hasFile('image') && $request->file('image')->isValid() && $validated['image'] != null) {
 
             // Faz o upload do arquivo para a pasta de imagens e gera o nome
             $filename = $request->file('image')->store('images', 'public');
@@ -56,7 +56,7 @@ class NewsController extends Controller
             // Salva no banco o nome do arquivo
             $news->save();
 
-        }
+        } */
 
         // Redireciona com a mensagem
         return redirect(route('news.create'))->with('status', __('Notícia cadastrada com sucesso.'));
